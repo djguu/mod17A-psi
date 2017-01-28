@@ -10,18 +10,21 @@ class UsersTable extends Table
 
     public function initialize(array $config)
     {
-        $this->displayField('name');
+        //mostra o campo username ao aceder a tabela
+        $this->displayField('username');
 
+        //define a ligacao a tabela characters
         $this->hasOne('Characters'));
     }
 
+    //efetuar validacoes ao enviar dados para a tabela
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->notEmpty('username');
+            ->notEmpty('username'); //campo nao pode estar vazio
 
         $validator
-            ->notEmpty('password');
+            ->notEmpty('password'); //campo nao pode estar vazio
 
         return $validator;
     }

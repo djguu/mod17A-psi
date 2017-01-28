@@ -10,27 +10,30 @@ class CardsTable extends Table
 
     public function initialize(array $config)
     {
+        //mostra o campo name ao aceder a tabela
         $this->displayField('name');
 
+        //define a ligacao a tabela characters
         $this->belongsToMany('Characters');
     }
 
+    //efetuar validacoes ao enviar dados para a tabela
     public function validationDefault(Validator $validator)
     {
 
         $validator
-            ->notEmpty('name');
+            ->notEmpty('name'); //campo nao pode estar vazio
 
         $validator
-            ->notEmpty('description');
+            ->notEmpty('description'); //campo nao pode estar vazio
 
         $validator
-            ->integer('atk')
-            ->notEmpty('atk');
+            ->integer('atk') //campo tem que ser um numero inteiro
+            ->notEmpty('atk'); //campo nao pode estar vazio
 
         $validator
-            ->integer('def')
-            ->notEmpty('def');
+            ->integer('def') //campo tem que ser um numero inteiro
+            ->notEmpty('def'); //campo nao pode estar vazio
 
         return $validator;
     }
