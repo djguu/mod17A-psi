@@ -14,11 +14,11 @@ class UsersTable extends Table
         $this->displayField('username');
 
         //define a ligacao a tabela characters
-        $this->hasOne('Characters'));
+        $this->belongsToMany('Cards');
     }
 
     //efetuar validacoes ao enviar dados para a tabela
-    public function validationDefault(Validator $validator)
+    public function validationUser(Validator $validator)
     {
         $validator
             ->notEmpty('username'); //campo nao pode estar vazio
