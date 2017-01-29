@@ -14,7 +14,7 @@ class CardsTable extends Table
         $this->displayField('name');
 
         //define a ligacao a tabela characters
-        $this->belongsToMany('Characters');
+        $this->belongsToMany('Users');
     }
 
     //efetuar validacoes ao enviar dados para a tabela
