@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand logo" href="index.html">Awesomeness</a>
+                  <?= $this->Html->link('YuGiOh', '/users/home', ['class' => 'navbar-brand']);?>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,21 +55,22 @@
                     <?php
                         if($this->request->Session()->read('Auth.User')) {
                         // user is logged in, show logout..user menu etc
-                            echo '
-                            <li><a href="#tf-home">Home</a></li>
-                            <li><a href="/cards">Cartas</a></li>
-                            <li><a href="/users/logout">Logout</a></li>';
+                            echo '<li>'.$this->Html->link('Home', ['controller'=>'users', 'action'=>'home']).'</li>'.
+                                 '<li>'.$this->Html->link('Cartas', ['controller'=>'cards', 'action'=>'view']).'</li>'.
+                                 '<li>'.$this->Html->link('Logout', ['controller'=>'users', 'action'=>'logout']).'</li>';
                         }
-                        echo '<li><a href="/users/login">Login</a></li>';
+                        else
+                        {
+                            echo '<li>'.$this->Html->link('Login', ['controller'=>'users', 'action'=>'login']).'</li>'.
+                              '<li>'.$this->Html->link('Registar', ['controller'=>'users', 'action'=>'register']).'</li>';
+                        }
                     ?>
                   </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         <div class="container">
-            <div class="content">
-                <?= $this->fetch('content') ?>
-            </div>
+            <?= $this->fetch('content') ?>
         </div>
     </div>
 
