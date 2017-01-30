@@ -56,7 +56,7 @@
                         if($this->request->Session()->read('Auth.User')) {
                         // user is logged in, show logout..user menu etc
                             echo '<li>'.$this->Html->link('Home', ['controller'=>'users', 'action'=>'home']).'</li>'.
-                                 '<li>'.$this->Html->link('Cartas', ['controller'=>'cards', 'action'=>'view']).'</li>'.
+                                 '<li>'.$this->Html->link('Cartas', ['controller'=>'cards', 'action'=>'index']).'</li>'.
                                  '<li>'.$this->Html->link('Logout', ['controller'=>'users', 'action'=>'logout']).'</li>';
                         }
                         else

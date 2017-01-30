@@ -18,7 +18,7 @@ class CardsTable extends Table
     }
 
     //efetuar validacoes ao enviar dados para a tabela
-    public function validationDefault(Validator $validator)
+    public function validationCard(Validator $validator)
     {
 
         $validator

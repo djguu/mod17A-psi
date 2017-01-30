@@ -5,7 +5,7 @@
     <?= $this->Form->create() ?>
         <fieldset align="center">
             <legend align="center"><?='Login'?></legend>
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-offset-4">
                 <?= $this->Form->input('username', ['class' => 'form-control', 'placeholder' => 'Username', 'label' => false]) ?><br>
                 <?= $this->Form->input('password', ['class' => 'form-control', 'placeholder' => 'Password', 'label' => false]) ?><br>
                 <?= $this->Form->button('Login',['class' => 'btn btn-primary my-btn-dark btn-md']); ?>
