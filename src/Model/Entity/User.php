@@ -12,9 +12,14 @@ class User extends Entity
                'id' => false
            ];
 
-
+    //gera a password com um hash
     protected function _setPassword($password)
     {
-        return (new DefaultPasswordHasher)->hash($password); //gera a password com um hash
+        return (new DefaultPasswordHasher)->hash($password);
     }
+
+    //esconde a password
+    protected $_hidden = [
+        'password'
+    ];
 }

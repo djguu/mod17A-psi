@@ -3,6 +3,7 @@ namespace App\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\ORM\RulesChecker;
 
 
 class UsersTable extends Table
@@ -27,6 +28,14 @@ class UsersTable extends Table
             ->notEmpty('password'); //campo nao pode estar vazio
 
         return $validator;
+    }
+
+    //impede que aja users iguais
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['username']));
+
+        return $rules;
     }
 
 }

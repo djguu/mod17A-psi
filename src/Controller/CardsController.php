@@ -50,6 +50,6 @@ class CardsController extends AppController
     public function delete($id){
         $card = $this->Cards->get($id); //recebe o id que esta no url
         $result = $this->Cards->delete($card); //apaga o registo
-        $this->redirect(['controller'=>'products', 'action'=>'index']); //redireciona para a acao index
+        $this->redirect(['action'=>'index']); //redireciona para a acao index
     }
 }

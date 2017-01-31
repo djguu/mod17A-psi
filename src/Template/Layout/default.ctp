@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <?= $this->Html->link('YuGiOh', '/users/home', ['class' => 'navbar-brand']);?>
+                  <?= $this->Html->link('YuGiOh', '/', ['class' => 'navbar-brand']);?>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,8 +55,9 @@
                     <?php
                         if($this->request->Session()->read('Auth.User')) {
                         // user is logged in, show logout..user menu etc
-                            echo '<li>'.$this->Html->link('Home', ['controller'=>'users', 'action'=>'home']).'</li>'.
+                            echo '<li>'.$this->Html->link('Users', ['controller'=>'users', 'action'=>'home']).'</li>'.
                                  '<li>'.$this->Html->link('Cartas', ['controller'=>'cards', 'action'=>'index']).'</li>'.
+                                 '<li style="padding: 15px 15px;">Utilizador: '.$this->request->Session()->read('Auth.User')['username'].'</li>'.
                                  '<li>'.$this->Html->link('Logout', ['controller'=>'users', 'action'=>'logout']).'</li>';
                         }
                         else

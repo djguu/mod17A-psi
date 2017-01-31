@@ -22,18 +22,36 @@ class CardsTable extends Table
     {
 
         $validator
-            ->notEmpty('name'); //campo nao pode estar vazio
+            ->notEmpty('name','Insira um nome'); //campo nao pode estar vazio
 
         $validator
-            ->notEmpty('description'); //campo nao pode estar vazio
+            ->notEmpty('description','insira uma descricao'); //campo nao pode estar vazio
 
         $validator
             ->integer('atk') //campo tem que ser um numero inteiro
-            ->notEmpty('atk'); //campo nao pode estar vazio
+            ->notEmpty('atk','insira um valor') //campo nao pode estar vazio
+            ->add('atk', 'myRule',[
+                    'rule' =>  function ($data, $provider) {
+                                    if ($data < 0) {
+                                        return false;
+                                    }
+                                    return true;
+                                },
+                    'message' => 'Insira no minimo 0'
+                ]);
 
         $validator
             ->integer('def') //campo tem que ser um numero inteiro
-            ->notEmpty('def'); //campo nao pode estar vazio
+            ->notEmpty('def','insira um valor') //campo nao pode estar vazio
+            ->add('def', 'myRule',[
+                    'rule' =>  function ($data, $provider) {
+                                    if ($data < 0) {
+                                        return false;
+                                    }
+                                    return true;
+                                },
+                    'message' => 'Insira no minimo 0'
+                ]);
 
         return $validator;
     }

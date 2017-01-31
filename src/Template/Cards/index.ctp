@@ -1,3 +1,4 @@
+<?= $this->element('sidebar/cards'); ?>
 <div class="container-fluid">
     <div class="users form col-md-12">
         <br>

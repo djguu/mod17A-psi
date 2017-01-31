@@ -8,8 +8,8 @@
             <div class="col-md-4 col-md-offset-4">
                 <?= $this->Form->input('name', ['class' => 'form-control', 'placeholder' => 'Name', 'label' => false]) ?><br>
                 <?= $this->Form->input('description', ['class' => 'form-control', 'placeholder' => 'Description', 'label' => false]) ?><br>
-                <?= $this->Form->input('atk', ['class' => 'form-control', 'placeholder' => 'Atk', 'label' => false, 'min' => 0]) ?><br>
-                <?= $this->Form->input('def', ['class' => 'form-control', 'placeholder' => 'Def', 'label' => false, 'min' => 0]) ?><br>
+                <?= $this->Form->input('atk', ['class' => 'form-control', 'placeholder' => 'Atk', 'label' => false]) ?><br>
+                <?= $this->Form->input('def', ['class' => 'form-control', 'placeholder' => 'Def', 'label' => false]) ?><br>
                 <?= $this->Form->button('Adicionar',['class' => 'btn btn-primary my-btn-dark btn-md']); ?>
             </div>
         </fieldset>
