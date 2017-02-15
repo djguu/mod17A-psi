@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 31-Jan-2017 às 11:59
+-- Generation Time: 15-Fev-2017 às 18:32
 -- Versão do servidor: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -33,16 +33,20 @@ CREATE TABLE `cards` (
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `atk` int(11) NOT NULL,
-  `def` int(11) NOT NULL
+  `def` int(11) NOT NULL,
+  `image` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cards`
 --
 
-INSERT INTO `cards` (`id`, `name`, `description`, `atk`, `def`) VALUES
-(2, 'Blue Eyes White Dragon', 'Dragao azulinho', 2000, 1900),
-(3, 'Dark Magician', 'feiticeiro malvado', 2400, 2000);
+INSERT INTO `cards` (`id`, `name`, `description`, `atk`, `def`, `image`) VALUES
+(2, 'Blue Eyes White Dragon', 'Dragao azulinho', 2000, 1900, 'cards/55be73a3-f37b-46bc-9a08-a46008b27964.jpg'),
+(3, 'Dark Magician', 'feiticeiro malvado', 2400, 2000, 'cards/55be73a3-f37b-46bc-9a08-a46008b27964.jpg'),
+(6, 'Black hole', 'Forms a black hole capable of destroying all the deck of the player and is life force', 9999999, 9999999, 'cards/55be73a3-f37b-46bc-9a08-a46008b27964.jpg'),
+(7, 'asdasd', 'asdasd', 123, 123, 'cards/55be73a3-f37b-46bc-9a08-a46008b27964.jpg'),
+(8, 'cartas123', '123asd', 342123, 13121, 'cards/ddb24d70-0211-46ba-8b72-67f7b4e91f76.jpg');
 
 -- --------------------------------------------------------
 
@@ -81,7 +85,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
 (2, 'djguu', '$2y$10$JVkL9vmGHT0rZzrH0QQttu3noMovl6fGyg6tBPjHSRsvMpGKbM6.C'),
-(3, 'teste', '$2y$10$/6csRZ9ZWE6//RiUohF4LOtDTvpxLfc5NjCMKcSfvsyMAOcwqzGx6');
+(3, 'teste', '$2y$10$/6csRZ9ZWE6//RiUohF4LOtDTvpxLfc5NjCMKcSfvsyMAOcwqzGx6'),
+(4, 'Gorgulho', '$2y$10$Uy0jullgDBvSMLpRN7/h5eMSPyvm4PPc3YJQeOaaVy/jblWA3QeUa'),
+(5, 'teste123', '$2y$10$Ar1rLVTRqQA40qp/JdiZCuKe/UU32mngFXn6g3e656d.STdfYAPya');
 
 --
 -- Indexes for dumped tables
@@ -113,12 +119,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

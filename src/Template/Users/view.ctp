@@ -1,21 +1,21 @@
 <div class="container-fluid">
     <div class="users form col-md-7 col-md-offset-2">
         <br>
-        <h2>User</h2><br><br>
+        <h2><?=__('User')?></h2><br><br>
         <table class="vertical-table">
             <tr>
-                <th>User: <?= h($user->username) ?></th>
+                <th><?=__('User').': '.h($user->username) ?></th>
             </tr>
         </table>
         <br>
-        <td><?= $this->Html->link('Editar user', '/users/edit/'.$id);?></td>
+        <td><?= $this->Html->link(__('Edit User'), '/users/edit/'.$id);?></td>
         <br><br>
         <?php if (!empty($user->cards)): ?>
-            <h2 class="col-md-offset-5">Cartas</h2><br>
+            <h2 class="col-md-offset-5"><?=__('Cards')?></h2><br>
             <table class="table table-striped table-hover">
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
+                    <th><?=__('Name')?></th>
+                    <th><?=__('Description')?></th>
                     <th>Atk</th>
                     <th>Def</th>
                 </td>
@@ -33,4 +33,4 @@
         <?php endif; ?>
     </div>
 </div>
-<?= $this->element('sidebar/users'); ?>
+<?= $this->element('sidebar/voltar',['page' => 'user']); ?>

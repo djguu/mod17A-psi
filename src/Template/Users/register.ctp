@@ -4,13 +4,13 @@
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
         <fieldset align="center">
-            <legend align="center"><?='Registar utiizador'?></legend>
+            <legend align="center"><?=__('Register User')?></legend>
             <div class="col-md-4 col-md-offset-4">
-                <?= $this->Form->input('username', ['class' => 'form-control', 'placeholder' => 'Username', 'label' => false]) ?><br>
-                <?= $this->Form->input('password', ['class' => 'form-control', 'placeholder' => 'Password', 'label' => false]) ?><br>
-                <?= 'Cartas:'?><br>
+                <?= $this->Form->input('username', ['class' => 'form-control', 'placeholder' => __('Username'), 'label' => false]) ?><br>
+                <?= $this->Form->input('password', ['class' => 'form-control', 'placeholder' => __('Password'), 'label' => false]) ?><br>
+                <?=__('Cards')?>:<br>
                 <?= $this->Form->input('cards._ids', ['label' => false, 'options' => $cards]); ?><br>
-                <?= $this->Form->button('Register',['class' => 'btn btn-primary my-btn-dark btn-md']); ?>
+                <?= $this->Form->button(__('Register'),['class' => 'btn btn-primary my-btn-dark btn-md']); ?>
             </div>
         </fieldset>
 

@@ -55,15 +55,15 @@
                     <?php
                         if($this->request->Session()->read('Auth.User')) {
                         // user is logged in, show logout..user menu etc
-                            echo '<li>'.$this->Html->link('Users', ['controller'=>'users', 'action'=>'home']).'</li>'.
-                                 '<li>'.$this->Html->link('Cartas', ['controller'=>'cards', 'action'=>'index']).'</li>'.
-                                 '<li style="padding: 15px 15px;">Utilizador: '.$this->request->Session()->read('Auth.User')['username'].'</li>'.
-                                 '<li>'.$this->Html->link('Logout', ['controller'=>'users', 'action'=>'logout']).'</li>';
+                            echo '<li>'.$this->Html->link(__('Users'), ['controller'=>'users', 'action'=>'home']).'</li>'.
+                                 '<li>'.$this->Html->link(__('Cards'), ['controller'=>'cards', 'action'=>'index']).'</li>'.
+                                 '<li style="padding: 15px 15px;">'.__('User').': '.$this->request->Session()->read('Auth.User')['username'].'</li>'.
+                                 '<li>'.$this->Html->link(__('Logout'), ['controller'=>'users', 'action'=>'logout']).'</li>';
                         }
                         else
                         {
-                            echo '<li>'.$this->Html->link('Login', ['controller'=>'users', 'action'=>'login']).'</li>'.
-                              '<li>'.$this->Html->link('Registar', ['controller'=>'users', 'action'=>'register']).'</li>';
+                            echo '<li>'.$this->Html->link(__('Login'), ['controller'=>'users', 'action'=>'login']).'</li>'.
+                              '<li>'.$this->Html->link(__('Register'), ['controller'=>'users', 'action'=>'register']).'</li>';
                         }
                     ?>
                   </ul>
@@ -73,6 +73,7 @@
         <div class="container">
             <?= $this->fetch('content') ?>
         </div>
+
     </div>
 
 
