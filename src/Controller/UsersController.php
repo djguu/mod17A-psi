@@ -3,15 +3,27 @@
 
     use App\Controller\AppController;
     use Cake\Event\Event;
+    use Cake\I18n\I18n;
 
     class UsersController extends AppController
     {
+        public $paginate = [
+            'limit' => 3 //limita o numero de registos a mostrar na pagina
+        ];
+
+        public function initialize()
+        {
+            parent::initialize();
+            $this->loadComponent('Paginator'); //carrega o componente de paginaçao
+            $this->loadComponent('RequestHandler'); //carrega o componente de pedidos REST
+        }
 
         public function beforeFilter(Event $event)
         {
             parent::beforeFilter($event);
-            $this->Auth->allow(['register']); //permite a aacao register sem estar logado
+            $this->Auth->allow(['register','home','edit','view','index']); //permite a aacao register sem estar logado
         }
+
 
 
         public function login()
@@ -79,7 +91,12 @@
         {
             $query = $this->Users->find('all'); //encontra todos os registos da tabela users
 
-            $this->set('users',$query); //define a variavel para enviar os registos
+            $this->set('users', $this->paginate($query)); //envia os registos para a pagina paginados
+
+            if($this->request->is('post')){ //espera por um pedido tipo POST
+                $locale = $this->request->data('locale'); //recebe o valor da linguagem inserida
+                I18n::locale($locale); //define a linguagem da pagina
+            }
         }
 
         public function view($id)

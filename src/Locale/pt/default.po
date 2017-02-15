@@ -1,0 +1,75 @@
+msgid "Users"
+msgstr "Utilizadores"
+
+msgid "Cards"
+msgstr "Cartas"
+
+msgid "User"
+msgstr "Utilizador"
+
+msgid "Logout"
+msgstr "Sair"
+
+msgid "Login"
+msgstr "Entrar"
+
+msgid "Register"
+msgstr "Registar"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Action"
+msgstr "Açoes"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit User"
+msgstr "Editar Utilizador"
+
+msgid "Username"
+msgstr "Nome de utilizador"
+
+msgid "Update"
+msgstr "Atualizar"
+
+msgid "Password"
+msgstr "Palavra passe"
+
+msgid "image"
+msgstr "Imagem"
+
+msgid "Add Card"
+msgstr "Adicionar Carta"
+
+msgid "Description"
+msgstr "Descriçao"
+
+msgid "Add"
+msgstr "Adicionar"
+
+msgid "Delete"
+msgstr "Apagar"
+
+msgid "Register User"
+msgstr "Registar Utilizador"
+
+msgid "Language"
+msgstr "Linguagem"
+
+msgid "Change"
+msgstr "Mudar"
+
+
+msgid "View Cards"
+msgstr "Ver Cartas"
+
+msgid "Add Cards"
+msgstr "Adicionar Cartas"
+
+msgid "Back"
+msgstr "Voltar"

@@ -1,0 +1,74 @@
+msgid "Users"
+msgstr "Users"
+
+msgid "Cards"
+msgstr "Cards"
+
+msgid "User"
+msgstr "User"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Action"
+msgstr "Actions"
+
+msgid "View"
+msgstr "View"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Edit User"
+msgstr "Edit User"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Add Card"
+msgstr "Add Card"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Register User"
+msgstr "Register User"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Change"
+msgstr "Change"
+
+msgid "View Cards"
+msgstr "View Cards"
+
+msgid "Add Cards"
+msgstr "Add Cards"
+
+msgid "Back"
+msgstr "Back"

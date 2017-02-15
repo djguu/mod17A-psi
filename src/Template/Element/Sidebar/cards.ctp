@@ -3,10 +3,10 @@
     <?php
         //muda o link consoante o parametro
         if($param == 'add'){
-            echo $this->Html->link('Adicionar Cartas', '/cards/add');
+            echo $this->Html->link(__('Add Cards'), '/cards/add');
         }
         else{
-            echo $this->Html->link('Ver cartas', '/cards');
+            echo $this->Html->link(__('View Cards'), '/cards');
         }
     ?>
 </h4></li>
